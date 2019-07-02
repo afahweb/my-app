@@ -1,0 +1,54 @@
+<div class="col-md-10 mx-auto">
+  <div class="card animated fadeInDown">
+    <div class="card-header">
+        <h5 class="text-center" style="font-weight: bold; color:darkcyan">Editar información <i class="fas fa-file-signature fa-2x" style="color: grey"></i></h5>
+    </div>
+    <div class="card-body">
+      <form action="/sheets/edit-sheet/{{sheet._id}}?_method=PUT" method="POST">
+      <input type="hidden" name="_method" value="PUT">
+         <div class="form-group text-center">
+            <i class="fas fa-user-tie fa-2x " style="color: grey"></i> 
+         </div>
+          
+         <div class="form-group">
+             <input type="text" name="name" class="form-control" value="{{sheet.name}}" autofocus>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-edit fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="data" class="form-control" cols="30" rows="8">{{sheet.data}}</textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-chalkboard-teacher fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="profile" class="form-control" cols="30" rows="10" >{{sheet.profile}}</textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-graduate fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="studies" class="form-control" cols="30" rows="10">{{sheet.studies}}</textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-cog fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="experience" class="form-control" cols="30" rows="10">{{sheet.experience}}</textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-friends fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="reference" class="form-control" cols="30" rows="5" >{{sheet.reference}}</textarea>
+         </div>
+         
+
+         <div class="form-group">
+             <button class="btn btn-primary btn-block" type="submit">Actualizar</button>
+         </div>
+      </form>
+    </div>
+</div>
+</div>

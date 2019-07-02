@@ -1,0 +1,47 @@
+<div class="row">
+{{#each sheets}}
+ <div class="col-md-10 mt-4">
+     <div class="card animated fadeInDown">
+         <div class="card-body">
+             <h4 class="card-title d-flex justify-content-between align-items-center" style="font-weight: bold"> 
+                 {{name}} <a href="/sheets/edit/{{_id}}"> <i class="fas fa-edit"></i></a>
+             </h4>
+             <div class="formato">
+             <h5>DATOS PERSONALES.</h5>
+             <p>{{data}}</p>
+             <h5>PERFIL.</h5>
+             <p>{{profile}}</p>
+             <h5>ESTUDIOS.</h5>
+             <p>{{studies}}</p>
+             <h5>EXPERIENCIA.</h5>
+             <p>{{experience}}</p>
+             <h5>REFERENCIAS.</h5>
+             <p>{{reference}}</p>
+             </div>
+                
+                 <form action="/sheets/delete/{{_id}}?_method=DELETE" method="POST">
+                  <input type="hidden" name="_method" value="DELETE">
+                  
+                  <button class="btn btn-warning btn-block btn-sm" type="submit">
+                  E L I M I N A R
+                  </button>
+                 
+                 </form>
+            
+         </div>
+
+     </div>
+
+ </div>
+ {{else}}
+ <div class="card mx-auto">
+     <div class="card-body">
+         <h3>Bienvenido  {{ user.name }}</h3>
+         <p class="lead">!No existe tu curriculum vitae!</p>
+         <a href="/sheets/add" class="btn btn-success btn-block">Crear!</a>
+
+     </div>
+
+ </div>
+ {{/each}}
+</div>

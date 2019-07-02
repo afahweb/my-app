@@ -1,0 +1,36 @@
+<div class="row">
+{{#each coments}}
+ <div class="col-md-10  p-3">
+     <div class="card animated fadeInDown">
+         <div class="card-body">
+              <p>
+                 {{date}} <i class="fas fa-calendar-day"></i>
+             </p>
+             <h4 class="card-title d-flex justify-content-between align-items-center"> 
+                 <p>{{ name }} dice:</p> <a href="/coments"> <i class="far fa-comments"></i></a>
+             </h4>
+             
+             <p>
+                 {{coment}}
+             </p>
+            
+            </form>
+            
+         </div>
+
+     </div>
+ </div>
+ {{else}}
+        <div class="card mx-auto">
+         <div class="card-body">
+         <h3>Bienvenido</h3>
+         <p class="lead">!No hay comentarios registrados por ningún usuario!</p>
+         <a href="/projects/add" class="btn btn-success btn-block">Empezar!</a>
+
+     </div>
+
+ </div>
+
+ {{/each}}
+</div>
+   

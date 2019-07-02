@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+ <div class="container">
+        <a class="navbar-brand" href="/"> <i class="fab fa-node fa-4x" style="color:rgb(240, 194, 10)"> </i> App Portafolio </a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">INICIO <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Comentarios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/coments/add">Comentar</a>
+          <a class="dropdown-item" href="/coments">Ver comentarios</a>
+          {{#if user}}
+          <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="/coments/my_coments">Mis comentarios</a>
+          {{/if}}
+        </div>   
+       </li>
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <img src="../../img/logo.png"  class="rounded-circle mx-auto d-block m-0 logo" alt="Logo">
+    </form>
+
+    <ul class="navbar-nav ml-auto">
+        {{#if user}}
+         <a class="nav-link " href="/" id="navbarDropdownMenuLink" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">
+        {{user.name}} <i class="far fa-user fa-2x" style="color: aqua"></i>
+        </a> 
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Acciones
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/sheets">Mí Curriculum</a>
+          <a class="dropdown-item" href="/sheets/add">Adicionar</a>
+          <a class="dropdown-item" href="/sheets/all-users">Ver todas</a>
+          <div class="dropdown-divider"></div>  
+          <a class="dropdown-item" href="/projects/add">Ingresar proyectos</a>
+          <a class="dropdown-item" href="/projects">Ver proyectos</a>
+          <a class="dropdown-item" href="/project">Mis proyectos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item disabled" href="#" aria-disabled="true">Notas</a>
+          <a class="dropdown-item disabled" href="#" aria-disabled="true">Ver notas</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/info">Mas información</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/users/logout">Salir..</a>
+          
+        </div>
+      </li>
+        {{else}}
+        <li class="nav-item ">
+        <a class="nav-link" href="/users/signup" class="sr-only">Registrarse</a>
+        </li>
+        <li class="nav-item ">
+        <a class="nav-link" href="/users/signin" class="sr-only">Ingresar</a>
+        </li>
+        {{/if}}
+       
+        
+        
+    </ul> 
+    
+  </div>
+ </div>
+
+</nav>

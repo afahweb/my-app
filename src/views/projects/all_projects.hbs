@@ -1,0 +1,39 @@
+<div class="container p-4">
+     {{#each projects}} 
+        <div class="row p-4">
+                      
+            <div class="card p-3">
+                
+              <div class="card animated fadeInDown">
+                  <img src="{{path}}" alt="" class="card-img-top"> 
+                  <div class="card-body">
+                  <h3 class="card-title">Proyecto: {{name}}</h3>
+                  <h5 class="card-title">Descripción: {{description}}</h5>
+                  <h5 class="card-title">Categoría: {{category}}</h5>
+                  <h5 class="card-title">Año creación:{{year}}</h5>
+                  <h5 class="card-title">lenguajes utilizados: {{langs}}</h5>
+                  <h5 class="card-title">Creador: {{name_user}}</h5><br>
+                  <a href="/projects/edit/{{_id}}" class="btn btn-success">Editar <i class="fas fa-edit"></i></a>
+                  <a href="/projects/delete/{{_id}}" class="btn btn-warning">Eliminar <i class="far fa-trash-alt"></i></i></a>
+                  </div> 
+
+              </div>
+            </div>
+            </div>
+        {{else}}
+        <div class="card mx-auto">
+         <div class="card-body">
+         <h3>Bienvenido  {{ user.name }}</h3>
+         <p class="lead">!No hay proyectos en tu cuenta!</p>
+         <a href="/projects/add" class="btn btn-success btn-block">E M P E Z A R   A   C R E A R !</a>
+
+     </div>
+
+ </div>
+ {{/each}}
+</div>
+
+
+
+ 
+ 

@@ -1,0 +1,19 @@
+<div class="col-md-6 mx-auto">
+    <div class="card">
+      <div class="card-header">
+          <h5>¿Seguro desea eliminar el proyecto {{project.name}}?</h5>
+          
+      </div>
+      <div class="card-body">
+          <form action="/projects/delete/{{project._id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+               <div class="form-group">
+                   <textarea name="description" class="form-control" cols="20" rows="3" style="resize: none" disabled>{{project.description}}</textarea>
+                </div>
+                <div class="form-group">
+                <button class="btn btn-danger btn-block" type="submit">Eliminar</button>
+                </div>
+          </form>
+
+      </div>
+    </div>

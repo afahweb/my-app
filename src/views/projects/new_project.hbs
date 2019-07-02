@@ -1,0 +1,67 @@
+<div class="container">
+ <img src="../../img/projects.png" class="rounded float-right img_project" alt="..." width="400px" height="200px" style="float: right">
+
+<div class="col-md-5 mx-left">
+<div class="header-content-left">
+  <div class="card animated fadeInDown">
+    <div class="card-header">
+        <h5 class="text-center" style="font-weight: bold">Crear proyecto <i class="far fa-address-card fa-lg" style="color:dodgerblue"></i></h5>
+    </div>
+    <div class="card-body">
+   <form action="/projects/new-project" method="POST" enctype="multipart/form-data"> <!--archivo de tipo imagen-->
+    <div class="form-group">
+      <label for="">Nombre</label>
+      <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">¿Como quires titular el proyecto?</small>
+    </div>
+    <div class="form-group">
+      <label for="">Descripción</label>
+      <input type="text" name="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+    <label for="">Categoría</label>
+    <select class="form-control" name="category">
+    <option>Seleccionar</option>
+    <option>Desarrollo Web</option>
+    <option>Desarrollo Móvil</option>
+    <option>Apps de escritorio</option>
+    <option>Emprendimiento personal</option>
+    </div>
+    </select>
+    <div class="form-group mt-2">
+      <label for="">Año creación</label>
+      <select class="form-control" name="year">
+      <option>Seleccionar</option>   
+      <option>2015</option>
+      <option>2016</option>
+      <option>2017</option>
+      <option>2018</option>
+      <option>2019</option>
+      <option>2020</option>
+      <option>2021</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Lenguajes de programación</label>
+      <input type="text" name="langs" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <form>
+    <div class="form-group">
+    <small id="emailHelp" class="form-text text-muted">¿Alguna imagen del proyecto?</small>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+    </div>
+    </form>
+    <button type="submit" class="btn btn-Dark btn-block">Enviar</button>
+    </form>
+    </div>
+   </div>
+  </div>
+ </div>
+
+</div>
+
+
+
+
+

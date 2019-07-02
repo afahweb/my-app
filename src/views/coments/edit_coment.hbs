@@ -1,0 +1,21 @@
+<div class="col-md-4 mx-auto">
+    <div class="card animated fadeInDown">
+      <div class="card-header">
+          <h5>Modificar comentario</h5>
+
+      </div>
+      <div class="card-body">
+          <form action="/coments/edit-coment/{{coment._id}}?_method=PUT" method="POST">
+          <input type="hidden" name="_method" value="PUT">
+               <div class="form-group">
+                   <textarea name="coment" class="form-control" cols="20" rows="3">{{coment.coment}}</textarea>
+                </div>
+                <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Modificar</button>
+                </div>
+          </form>
+
+      </div>
+    </div>
+
+</div>

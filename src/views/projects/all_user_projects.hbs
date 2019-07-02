@@ -1,0 +1,33 @@
+<div class="container p-4">
+    {{#each projects}}
+        <div class="row p-3">
+            <div class="card p-3">
+              
+              <div class="card animated fadeInDown">
+                  <img src="{{path}}" alt="" class="card-img-top">
+                  <div class="card-body">
+                  <h3 class="card-title">Proyecto: {{name}}</h3>
+                  <h5 class="card-title">Descripción: {{description}}</h5>
+                  <h5 class="card-title">Categoría: {{category}}</h5>
+                  <h5 class="card-title">Año creación: {{year}}</h5>
+                  <h5 class="card-title">Lenguajes utilizados: {{langs}}</h5>
+                  <h5 class="card-title">Creador: {{name_user}}</h5>
+                  </div> 
+
+              </div>
+              
+            </div>
+           </div> 
+        {{else}}
+        <div class="card mx-auto">
+         <div class="card-body">
+         <h3>Bienvenido</h3>
+         <p class="lead">!No hay proyectos registrados!</p>
+         <a href="/projects/add" class="btn btn-success btn-block">Empezar!</a>
+
+     </div>
+
+ </div>
+ {{/each}}
+</div>
+</div>

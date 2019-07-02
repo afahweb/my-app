@@ -1,0 +1,53 @@
+<div class="col-md-10 mx-auto">
+  <div class="card">
+    <div class="card-header animated fadeInDown">
+        <h5 class="text-center" style="font-weight: bold">Información Curriculum <i class="fas fa-file-signature fa-2x" style="color: grey"></i></h5>
+    </div>
+    <div class="card-body">
+      <form action="/sheets/new-sheet" method="POST">
+         <div class="form-group text-center">
+            <i class="fas fa-user-tie fa-2x " style="color: grey"></i> 
+         </div>
+          
+         <div class="form-group">
+             <input type="text" name="name" class="form-control" placeholder="Nombre completo" autofocus>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-edit fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="data" class="form-control" cols="30" rows="8" placeholder="Datos personales" ></textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-chalkboard-teacher fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="profile" class="form-control" cols="30" rows="10" placeholder="Perfil profesional" ></textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-graduate fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="studies" class="form-control" cols="30" rows="10" placeholder="Estudios realizados" ></textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-cog fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="experience" class="form-control" cols="30" rows="10" placeholder="Experiencia" ></textarea>
+         </div>
+         <div class="form-group text-center">
+            <i class="fas fa-user-friends fa-2x " style="color: grey"></i> 
+         </div>
+         <div class="form-group">
+             <textarea name="reference" class="form-control" cols="30" rows="5" placeholder="Referencias" ></textarea>
+         </div>
+         
+
+         <div class="form-group">
+             <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+         </div>
+      </form>
+    </div>
+</div>
+</div>

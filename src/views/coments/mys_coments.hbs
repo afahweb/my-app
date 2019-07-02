@@ -1,0 +1,46 @@
+
+<div class="row">
+
+{{#each coments}}
+ <div class="col-md-10 p-3">
+     
+     <div class="card animated fadeInDown">
+         
+         <div class="card-body">
+             <h5 class="text-right">
+             <i class="fas fa-calendar-day "></i>{{date}} 
+             <a href="/coments/delete/{{_id}}"><i class="fas fa-minus-circle " style="color: tomato"></i></a>
+             <a href="/coments/edit/{{_id}}"> <i class="fas fa-edit " style="color:green"></i></a>
+             </h5>
+             
+             <h4 class="card-title d-flex justify-content-between align-items-center"> 
+                <p>{{ name }} dice: 
+                
+                </p>                 
+             </h4>  
+             <p>
+                 
+                 {{coment}}
+
+             </p>
+            </form>
+            
+         </div>
+
+     </div>
+ </div>
+ {{else}}
+ <div class="card mx-auto">
+     <div class="card-body">
+         <h3>Bienvenido  {{ user.name }}</h3>
+         <p class="lead">!No existen comentarios para esta cuenta!</p>
+         <a href="/coments/add" class="btn btn-success btn-block">Comentar...!</a>
+
+     </div>
+
+ </div>
+ 
+ {{/each}}
+ 
+</div>
+   

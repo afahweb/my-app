@@ -1,0 +1,40 @@
+<div class="row">
+{{#each sheets}}
+ <div class="col-md-10 mt-4">
+     <div class="card animated fadeInDown">
+         <div class="card-body">
+             <h4 class="card-title d-flex justify-content-between align-items-center" style="font-weight: bold"> 
+                 {{name}} <a href="/sheets/all-users"> <i class="fas fa-sticky-note fa-lg"></i></a>
+             </h4>
+             <div class="formato">
+             <h5>DATOS PERSONALES.</h5>
+             <p>{{data}}</p>
+             <h5>PERFIL.</h5>
+             <p>{{profile}}</p>
+             <h5>ESTUDIOS.</h5>
+             <p>{{studies}}</p>
+             <h5>EXPERIENCIA.</h5>
+             <p>{{experience}}</p>
+             <h5>REFERENCIAS.</h5>
+             <p>{{reference}}</p>
+             </div>
+                
+            
+         </div>
+
+     </div>
+
+ </div>
+ 
+ {{else}}
+        <div class="card mx-auto">
+         <div class="card-body">
+         <h3>Bienvenido  {{ user.name }}</h3>
+         <p class="lead">!No hay ningun curriculum almacenado!</p>
+         <a href="/sheets/add" class="btn btn-success btn-block">Crear!</a>
+
+     </div>
+
+ </div>
+ {{/each}}
+</div>
