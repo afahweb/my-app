@@ -2,7 +2,7 @@
 Proyecto con NodeJS
 App Portafolio NodeJS and MongoDB
 Aplicación desarrollada para mostrar curriculum, proyectos web y notas del usuario.
-La Aplicación permite llevar registro de su curriculum viate, una forma sencilla de almacenar información relevante de su perfil, con la posibilidad de administrar los diferentes módulos de la APP.
+La Aplicación permite llevar registro de su curriculum vitae, una forma sencilla de almacenar información relevante de su perfil, con la posibilidad de administrar los diferentes módulos de la APP.
 
 Información Técnica.
 Una API-REST simple para hacer comentarios, guardar informacion personal, guardar proyectos personales, a su vez se podran listar, actualizar y eliminar bajo la cuenta de cada usuario.
